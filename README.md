@@ -52,3 +52,71 @@ Ensure the following are installed before proceeding:
 ```bash
 git clone https://github.com/Arpit0417/Face-Recognition-Attendance-System.git
 cd Face-Recognition-Attendance-System
+```
+
+### 2. Install Required Dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Prepare the Directory Structure:
+- Create a folder named `data/` to store facial data and user names.
+- Create a folder named `Attendance/` to save attendance logs.
+
+### 4. Run the Scripts:
+- **Add New Users**: `python add_faces.py`
+- **Start Attendance Recognition**: `python test.py`
+- **View Attendance Records**: `streamlit run app.py`
+
+---
+
+## Usage Instructions
+
+### Adding New Users:
+1. Run `add_faces.py` and enter the user's name when prompted.
+2. The script will capture and store 100 facial images for training.
+
+### Taking Attendance:
+1. Run `test.py` to start the real-time recognition process.
+2. Press `o` to log attendance for the detected user.
+3. Press `c` to stop the recognition process.
+
+### Viewing Attendance:
+1. Run `app.py` to launch the Streamlit dashboard.
+2. The dashboard will display the day's attendance records.
+
+---
+
+## Directory Structure
+
+```
+├── data/
+│   ├── names.pkl                   # Stores user names
+│   ├── faces_data.pkl              # Stores facial data
+│   └── haarcascade_frontalface_default.xml
+├── Attendance/
+│   ├── Attendance_<date>.csv       # Daily attendance records
+├── add_faces.py                    # Script for capturing user faces
+├── test.py                         # Script for real-time recognition
+├── app.py                          # Streamlit dashboard
+└── requirements.txt                # Python package dependencies
+```
+
+---
+
+## Future Enhancements
+
+- Add support for detecting face masks during recognition.
+- Implement multi-role support (e.g., staff and students).
+- Migrate attendance records to a database for scalability.
+- Optimize the KNN model for enhanced performance.
+
+---
+
+## Acknowledgements
+
+- **OpenCV**: For face detection.
+- **scikit-learn**: For KNN-based classification.
+- **Streamlit**: For the interactive attendance dashboard.
+
+---
