@@ -50,5 +50,5 @@ Ensure the following are installed before proceeding:
 
 ### 1. Clone the Repository:
 ```bash
-git clone https://github.com/username/face-recognition-attendance.git
-cd face-recognition-attendance
+git clone https://github.com/Arpit0417/Face-Recognition-Attendance-System.git
+cd Face-Recognition-Attendance-System
